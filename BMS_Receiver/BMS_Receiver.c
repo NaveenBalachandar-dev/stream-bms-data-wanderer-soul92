@@ -14,7 +14,7 @@
 
 int  main()
 {
-  printf("Receiver data processing")
+  printf("Receiver data processing");
   return 0;
 }
 
