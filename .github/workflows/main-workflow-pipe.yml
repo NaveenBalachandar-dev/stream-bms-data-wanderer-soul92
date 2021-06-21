@@ -37,7 +37,7 @@ jobs:
         flake8 . --count --exit-zero --max-line-length=80 --ignore=E111,E121,E126 --statistics
       
     - name: run pipe
-      run:  python stream_bms_data.py | ./BMSReceiver  
+      run:  python bms_test_.py | ./BMSReceiver  
 
     - name: collect coverage
       run: gcovr --gcov-exclude=".*test.*" -r . --html --html-details -o coverage.html
