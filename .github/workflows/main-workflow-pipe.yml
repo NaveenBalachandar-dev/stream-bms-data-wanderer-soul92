@@ -36,6 +36,12 @@ jobs:
         # exit-zero treats all errors as warnings.
         flake8 . --count --exit-zero --max-line-length=80 --ignore=E111,E121,E126 --statistics
       
+    - name: Testcases
+      run: python bms_test_.py
+      
+    - name: Run C
+      run: ./BMSReceiver
+      
     - name: run pipe
       run:  python bms_test_.py | ./BMSReceiver  
 
