@@ -53,7 +53,7 @@ void receiveConsoleData_v()
   }  
     
   /*Decoding charge rate data*/      
-  ret = strstr(rxBuffer, "\"soc\": ");
+  ret = strstr(rxBuffer, "\"charge_rate\": ");
   if (ret != NULL)
   {
    start =15;
