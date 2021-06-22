@@ -35,11 +35,25 @@ void receiveConsoleData_v()
   ret = strstr(rxBuffer, "\"temperature\": ");
   if (ret != NULL)
   {
-   printf("rx temp data is %s\n", ret);
+   //printf("rx temp data is %s\n", ret);
    substring(destination, ret, start, len);
    //ret2 = strtok(ret, ": ");
    printf("rx temp2 data is %s\n", destination);
-   }
+  }
+    
+  /*Decoding soc data*/      
+  ret = strstr(rxBuffer, "\"soc\": ");
+  if (ret != NULL)
+  {
+   start =7;
+   //printf("rx temp data is %s\n", ret);
+   substring(destination, ret, start, len);
+   //ret2 = strtok(ret, ": ");
+   printf("rx soc data is %s\n", destination);
+  }  
+    
+    
+    
    //ret2 = strtok(rxBuffer, ": ");
  // printf("rx temp2 data is %s\n", ret);
   }
