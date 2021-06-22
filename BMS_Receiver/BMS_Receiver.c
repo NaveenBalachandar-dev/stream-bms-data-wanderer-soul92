@@ -16,12 +16,16 @@ void receiveConsoleData_v()
 {
   char rxBuffer[1000] = {0};
   int i;
-  for (i=0;i<100;i++)
+  char *ret;
+  for (i=0;i<74;i++)
   {
   //scanf("%s", rxBuffer);
   gets (rxBuffer);
-  printf("Receiver data processing");  
-  printf("data is %s\n", rxBuffer);
+  //printf("Receiver data processing");  
+  printf("rx data is %s\n", rxBuffer);
+    
+  ret = strstr(rv_data, "{"temperature":");
+    printf("rx temp data is %s\n", ret);
   }
 }
 
