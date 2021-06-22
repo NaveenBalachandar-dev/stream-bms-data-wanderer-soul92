@@ -45,9 +45,9 @@ void receiveConsoleData_v()
    //printf("rx temp data is %s\n", ret);
    substring(destination, ret, start, len);
    //ret2 = strtok(ret, ": ");
-  // printf("rx temp2 data is %s\n", destination);
+   printf("rx temp1 data is %s\n", destination);
      Temp[index++] = atoi(destination);
-    printf("rx temp2 data is %d\n", Temp[index]);
+    printf("rx temp2 data is %d\n", Temp[index-1]);
   }
     
   /*Decoding soc data*/      
