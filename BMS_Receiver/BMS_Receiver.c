@@ -20,8 +20,8 @@ void receiveConsoleData_v()
   char rxBuffer[1000] = {0};
   int i;
   char *ret;
-   char *ret2;
-  int strat =16;
+   //char *ret2;
+  int start =16;
   int len =2;
   char destination[25];
   for (i=0;i<74;i++)
