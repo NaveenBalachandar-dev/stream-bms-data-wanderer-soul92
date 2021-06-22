@@ -29,7 +29,7 @@ void receiveConsoleData_v()
   ret = strstr(rxBuffer, "temperature: ");
     printf("rx temp data is %s\n", ret);
     
-  ret = strtok(rxBuffer, ""temperature": ");
+  ret = strtok(rxBuffer, ": ");
   printf("rx temp2 data is %s\n", ret);
   }
 }
