@@ -24,7 +24,7 @@ void receiveConsoleData_v()
   int start =15;
   int len =2;
   char destination[25];
-  int Temp[30] = {0};
+  static int Temp[30] = {0};
   int soc[30] = {0};
   int chargerate[30] = {0};
   char tempbuffer[30];
