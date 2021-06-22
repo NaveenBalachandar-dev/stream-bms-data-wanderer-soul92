@@ -52,7 +52,16 @@ void receiveConsoleData_v()
    printf("rx soc data is %s\n", destination);
   }  
     
-    
+  /*Decoding charge rate data*/      
+  ret = strstr(rxBuffer, "\"soc\": ");
+  if (ret != NULL)
+  {
+   start =15;
+   //printf("rx temp data is %s\n", ret);
+   substring(destination, ret, start, len);
+   //ret2 = strtok(ret, ": ");
+   printf("rx charge rate data is %s\n", destination);
+  } 
     
    //ret2 = strtok(rxBuffer, ": ");
  // printf("rx temp2 data is %s\n", ret);
