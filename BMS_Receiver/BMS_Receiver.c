@@ -36,7 +36,7 @@ void receiveConsoleData_v()
  /*Reading recived data from console*/
   gets (rxBuffer);
     
-  //printf("rx data is %s\n", rxBuffer);
+  printf("rx data is %s\n", rxBuffer);
   
   /*Decoding Temperature data*/      
   ret = strstr(rxBuffer, "\"temperature\": ");
