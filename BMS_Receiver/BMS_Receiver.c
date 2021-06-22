@@ -86,24 +86,26 @@ void receiveConsoleData_v()
   
      
     
-    //for(i=1; i<15; i++)
-    //{
-     //   /* If current element is greater than max */
-     // if(Temp[i] > max)
-      //  {
-       //  max = Temp[i];
-       // }
-
-       // /* If current element is smaller than min */
-       //if(Temp[i] < min)
-       // {
-       //    min = Temp[i];
-        //}
-   // }
+    
    //ret2 = strtok(rxBuffer, ": ");
   }
    max = Temp[0];
-     min = Temp[13];
+     min = Temp[0];
+  
+   for(i=1; i<15; i++)
+    {
+        /* If current element is greater than max */
+      if(Temp[i] > max)
+      {
+       max = Temp[i];
+       }
+
+       /* If current element is smaller than min */
+       if(Temp[i] < min)
+       {
+        min = Temp[i];
+        }
+     }
    printf("rx temp data Min:%dMax:%d",min,max);
 }
 
