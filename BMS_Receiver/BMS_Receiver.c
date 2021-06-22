@@ -93,7 +93,7 @@ void receiveConsoleData_v()
        // {
          //   min = Temp[i];
        // }
-    }
+   // }
    //ret2 = strtok(rxBuffer, ": ");
   }
    //max = Temp[0];
