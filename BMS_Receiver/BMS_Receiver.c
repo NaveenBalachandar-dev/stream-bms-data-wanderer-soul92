@@ -47,6 +47,7 @@ void receiveConsoleData_v()
    //ret2 = strtok(ret, ": ");
   // printf("rx temp2 data is %s\n", destination);
      Temp[index++] = atoi(destination);
+    printf("rx temp2 data is %d\n", Temp[index]);
   }
     
   /*Decoding soc data*/      
@@ -77,25 +78,25 @@ void receiveConsoleData_v()
     
   /*Finding min and max of temperature*/
     /* Assume first element as maximum and minimum */
-    max = Temp[0];
-    min = Temp[0];
+   // max = Temp[0];
+    //min = Temp[0];
     
-    for(i=1; i<index; i++)
-    {
+    //for(i=1; i<index; i++)
+    //{
         /* If current element is greater than max */
-        if(Temp[i] > max)
-        {
-            max = Temp[i];
-        }
+      //  if(Temp[i] > max)
+      //  {
+      //      max = Temp[i];
+     //   }
 
         /* If current element is smaller than min */
-        if(Temp[i] < min)
-        {
+      // if(Temp[i] < min)
+       // {
             min = Temp[i];
-        }
-    }
+       // }
+    //}
    //ret2 = strtok(rxBuffer, ": ");
-  printf("rx temp data Min : %s ; Min : %s\n", min,max);
+ // printf("rx temp data Min : %s ; Min : %s\n", min,max);
   }
 }
 
