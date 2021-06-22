@@ -78,8 +78,7 @@ void receiveConsoleData_v()
     
   /*Finding min and max of temperature*/
     /* Assume first element as maximum and minimum */
-    max = Temp[0];
-    min = Temp[0];
+  
     
    // for(i=1; i<15; i++)
     //{
@@ -97,7 +96,9 @@ void receiveConsoleData_v()
     }
    //ret2 = strtok(rxBuffer, ": ");
   }
-   printf("rx temp data Min : %d ; Min : %d\n", min,max);
+   max = Temp[0];
+   min = Temp[0];
+   printf("rx temp data Min :%d Min : %d", min,max);
 }
 
 // Function to implement substring function in C
