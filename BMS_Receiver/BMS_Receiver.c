@@ -21,7 +21,7 @@ void receiveConsoleData_v()
   int i;
   char *ret;
    //char *ret2;
-  int start =16;
+  int start =15;
   int len =2;
   char destination[25];
   for (i=0;i<74;i++)
