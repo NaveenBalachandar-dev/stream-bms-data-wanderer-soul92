@@ -49,7 +49,7 @@ void receiveConsoleData_v()
      Temp[index++] = atoi(destination);
      printf("rx temp2 data is %d\n", Temp[index-1]);
      printf("rx temp data Min:%dMax:%d",Temp[2],Temp[13]);
-     printf("rx temp2 data is %d\n", index);
+     printf("rx index data is %d\n", index);
   }
     
   /*Decoding soc data*/      
