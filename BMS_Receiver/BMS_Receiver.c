@@ -19,19 +19,23 @@ void receiveConsoleData_v()
   char rxBuffer[1000] = {0};
   int i;
   char *ret;
+   char *ret2;
   for (i=0;i<74;i++)
   {
-  //scanf("%s", rxBuffer);
+ /*Reading recived data from console*/
   gets (rxBuffer);
-  //printf("Receiver data processing");  
-  printf("rx data is %s\n", rxBuffer);
     
+  printf("rx data is %s\n", rxBuffer);
+  
+  /*Decoding Temperature data*/      
   ret = strstr(rxBuffer, "\"temperature\": ");
-    if (ret != NULL)
-    {
-    printf("rx temp data is %s\n", ret);
-    }
-  //ret = strtok(rxBuffer, ": ");
+  if (ret != NULL)
+  {
+   printf("rx temp data is %s\n", ret);
+   ret2 = strtok(ret, ": ");
+   printf("rx temp2 data is %s\n", ret2);
+   }
+   //ret2 = strtok(rxBuffer, ": ");
  // printf("rx temp2 data is %s\n", ret);
   }
 }
