@@ -13,6 +13,7 @@
 /*------ Project includes -------*/
 #include "BMS_Receiver.h"
 
+char* substring(char *destination, const char *source, int beg, int n);
 
 void receiveConsoleData_v()
 {
@@ -20,6 +21,9 @@ void receiveConsoleData_v()
   int i;
   char *ret;
    char *ret2;
+  int strat =16;
+  int len =2;
+  char destination[25];
   for (i=0;i<74;i++)
   {
  /*Reading recived data from console*/
@@ -32,15 +36,35 @@ void receiveConsoleData_v()
   if (ret != NULL)
   {
    printf("rx temp data is %s\n", ret);
-   ret2 = strtok(ret, ": ");
-   printf("rx temp2 data is %s\n", ret2);
+   substring(destination, ret, start, len);
+   //ret2 = strtok(ret, ": ");
+   printf("rx temp2 data is %s\n", destination);
    }
    //ret2 = strtok(rxBuffer, ": ");
  // printf("rx temp2 data is %s\n", ret);
   }
 }
 
-
+// Function to implement substring function in C
+char* substring(char *destination, const char *source, int beg, int n)
+{
+    // extracts `n` characters from the source string starting from `beg` index
+    // and copy them into the destination string
+    while (n > 0)
+    {
+        *destination = *(source + beg);
+ 
+        destination++;
+        source++;
+        n--;
+    }
+ 
+    // null terminate destination string
+    *destination = '\0';
+ 
+    // return the destination string
+    return destination;
+}
 int  main()
 {
  // printf("Receiver data processing");
