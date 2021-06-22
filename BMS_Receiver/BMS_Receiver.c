@@ -50,7 +50,7 @@ void receiveConsoleData_v()
    //printf("rx temp1 data is %s\n", destination);
      Temp[index] = atoi(destination);
      printf("rx temp2 data is %d\n", Temp[index]);
-    // printf("rx temp data Min:%dMax:%d",Temp[2],Temp[13]);
+    
      printf("rx index data is %d\n", index);
      index = index + 1;
   }
@@ -103,7 +103,7 @@ void receiveConsoleData_v()
   }
    //max = Temp[0];
    //min = Temp[1];
-  // printf("rx temp data Min:%dMax:%d",Temp[2],Temp[13]);
+   printf("rx temp data Min:%dMax:%d",Temp[2],Temp[13]);
 }
 
 // Function to implement substring function in C
