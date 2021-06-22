@@ -29,6 +29,8 @@ void receiveConsoleData_v()
   int chargerate[30] = {0};
   char tempbuffer[30];
   int index =0;
+  int index1 =0;
+  int index2 =0;
   int max, min;
   
   for (i=0;i<74;i++)
@@ -47,8 +49,8 @@ void receiveConsoleData_v()
    //ret2 = strtok(ret, ": ");
    //printf("rx temp1 data is %s\n", destination);
      Temp[index] = atoi(destination);
-     printf("rx temp2 data is %d\n", Temp[index-1]);
-     printf("rx temp data Min:%dMax:%d",Temp[2],Temp[13]);
+     printf("rx temp2 data is %d\n", Temp[index]);
+    // printf("rx temp data Min:%dMax:%d",Temp[2],Temp[13]);
      printf("rx index data is %d\n", index);
      index = index + 1;
   }
@@ -63,7 +65,7 @@ void receiveConsoleData_v()
    substring(destination, ret, start, len);
    //ret2 = strtok(ret, ": ");
    //printf("rx soc data is %s\n", destination);
-    soc[index++] = atoi(destination);
+    soc[index1++] = atoi(destination);
   }  
     
   /*Decoding charge rate data*/      
@@ -76,7 +78,7 @@ void receiveConsoleData_v()
    substring(destination, ret, start, len);
    //ret2 = strtok(ret, ": ");
    //printf("rx charge rate data is %s\n", destination);
-    chargerate[index++]= atoi(destination);
+    chargerate[index2++]= atoi(destination);
   } 
     
   /*Finding min and max of temperature*/
