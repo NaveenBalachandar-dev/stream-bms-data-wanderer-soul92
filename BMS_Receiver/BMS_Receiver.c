@@ -24,7 +24,7 @@ void receiveConsoleData_v()
   //printf("Receiver data processing");  
   printf("rx data is %s\n", rxBuffer);
     
-  ret = strstr(rv_data, "{"temperature":");
+  ret = strstr(rv_data, "temperature");
     printf("rx temp data is %s\n", ret);
   }
 }
