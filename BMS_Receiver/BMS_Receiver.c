@@ -81,7 +81,7 @@ void receiveConsoleData_v()
     max = Temp[0];
     min = Temp[0];
     
-    for(i=1; i<index; i++)
+    for(i=1; i<15; i++)
     {
         /* If current element is greater than max */
        if(Temp[i] > max)
@@ -96,8 +96,8 @@ void receiveConsoleData_v()
        // }
     }
    //ret2 = strtok(rxBuffer, ": ");
-   printf("rx temp data Min : %s ; Min : %s\n", min,max);
   }
+   printf("rx temp data Min : %s ; Min : %s\n", min,max);
 }
 
 // Function to implement substring function in C
