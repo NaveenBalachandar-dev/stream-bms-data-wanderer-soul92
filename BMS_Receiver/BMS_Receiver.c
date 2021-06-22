@@ -18,9 +18,9 @@ void receiveConsoleData_v()
   int i;
   for (i=0;i<100;i++)
   {
-  scanf("%s", rv_data);
+  scanf("%s", rxBuffer);
   printf("Receiver data processing");  
-  printf("data is %s\n", rv_data);
+  printf("data is %s\n", rxBuffer);
   }
 }
 
