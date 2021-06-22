@@ -98,7 +98,7 @@ void receiveConsoleData_v()
   }
    //max = Temp[0];
    //min = Temp[1];
-   //printf("rx temp data Min :%d Min : %d", min,max);
+   printf("rx temp data Min:%dMax:%d",Temp[0],Temp[14]);
 }
 
 // Function to implement substring function in C
