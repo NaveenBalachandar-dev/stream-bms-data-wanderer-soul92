@@ -9,12 +9,26 @@
 #include <stdlib.h>
 
 /*------ Project includes -------*/
-//#include "BMS_Receiver.h"
+#include "BMS_Receiver.h"
+
+
+void receiveConsoleData_v()
+{
+  char rxBuffer[1000] = {0};
+  int i;
+  for (i=0;i<100;i++)
+  {
+  scanf("%s", rv_data);
+  printf("Receiver data processing");  
+  printf("data is %s\n", rv_data);
+  }
+}
 
 
 int  main()
 {
-  printf("Receiver data processing");
+ // printf("Receiver data processing");
+  receiveConsoleData_v();
   return 0;
 }
 
