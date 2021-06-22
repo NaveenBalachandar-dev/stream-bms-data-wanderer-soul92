@@ -26,11 +26,13 @@ void receiveConsoleData_v()
   //printf("Receiver data processing");  
   printf("rx data is %s\n", rxBuffer);
     
-  ret = strstr(rxBuffer, "temperature: ");
+  ret = strstr(rxBuffer, "\"temperature\": ");
+    if (ret != NULL)
+    {
     printf("rx temp data is %s\n", ret);
-    
-  ret = strtok(rxBuffer, ": ");
-  printf("rx temp2 data is %s\n", ret);
+    }
+  //ret = strtok(rxBuffer, ": ");
+ // printf("rx temp2 data is %s\n", ret);
   }
 }
 
