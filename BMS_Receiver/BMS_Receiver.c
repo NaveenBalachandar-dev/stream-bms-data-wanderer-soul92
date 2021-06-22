@@ -28,6 +28,8 @@ void receiveConsoleData_v()
   char soc[30] = {0};
   char chargerate[30] = {0};
   int index =0;
+  int max, min;
+  
   for (i=0;i<74;i++)
   {
  /*Reading recived data from console*/
@@ -72,8 +74,27 @@ void receiveConsoleData_v()
     chargerate[index++] = destination;
   } 
     
+  /*Finding min and max of temperature*/
+    /* Assume first element as maximum and minimum */
+    max = Temp[0];
+    min = Temp[0];
+    
+    for(i=1; i<index; i++)
+    {
+        /* If current element is greater than max */
+        if(Temp[i] > max)
+        {
+            max = Temp[i];
+        }
+
+        /* If current element is smaller than min */
+        if(Temp[i] < min)
+        {
+            min = Temp[i];
+        }
+    }
    //ret2 = strtok(rxBuffer, ": ");
- // printf("rx temp2 data is %s\n", ret);
+  printf("rx temp data Min : %s ; Min : %s\n", min,max);
   }
 }
 
