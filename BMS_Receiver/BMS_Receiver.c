@@ -24,12 +24,16 @@ void receiveConsoleData_v()
   int start =15;
   int len =2;
   char destination[25];
+  char Temp[30] = {0};
+  char soc[30] = {0};
+  char chargerate[30] = {0};
+  int index =0;
   for (i=0;i<74;i++)
   {
  /*Reading recived data from console*/
   gets (rxBuffer);
     
-  printf("rx data is %s\n", rxBuffer);
+  //printf("rx data is %s\n", rxBuffer);
   
   /*Decoding Temperature data*/      
   ret = strstr(rxBuffer, "\"temperature\": ");
@@ -38,29 +42,34 @@ void receiveConsoleData_v()
    //printf("rx temp data is %s\n", ret);
    substring(destination, ret, start, len);
    //ret2 = strtok(ret, ": ");
-   printf("rx temp2 data is %s\n", destination);
+  // printf("rx temp2 data is %s\n", destination);
+     Temp[index++] = destination;
   }
     
   /*Decoding soc data*/      
   ret = strstr(rxBuffer, "\"soc\": ");
+  index =0;
   if (ret != NULL)
   {
    start =7;
    //printf("rx temp data is %s\n", ret);
    substring(destination, ret, start, len);
    //ret2 = strtok(ret, ": ");
-   printf("rx soc data is %s\n", destination);
+   //printf("rx soc data is %s\n", destination);
+    soc[index++] = destination;
   }  
     
   /*Decoding charge rate data*/      
   ret = strstr(rxBuffer, "\"charge_rate\": ");
+  index =0;  
   if (ret != NULL)
   {
    start =15;
    //printf("rx temp data is %s\n", ret);
    substring(destination, ret, start, len);
    //ret2 = strtok(ret, ": ");
-   printf("rx charge rate data is %s\n", destination);
+   //printf("rx charge rate data is %s\n", destination);
+    chargerate[index++] = destination;
   } 
     
    //ret2 = strtok(rxBuffer, ": ");
