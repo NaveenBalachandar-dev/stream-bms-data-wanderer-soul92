@@ -97,7 +97,7 @@ void receiveConsoleData_v()
    //ret2 = strtok(rxBuffer, ": ");
   }
    max = Temp[0];
-   min = Temp[0];
+   min = Temp[1];
    printf("rx temp data Min :%d Min : %d", min,max);
 }
 
