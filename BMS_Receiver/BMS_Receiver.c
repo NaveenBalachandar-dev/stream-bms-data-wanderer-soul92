@@ -18,7 +18,8 @@ void receiveConsoleData_v()
   int i;
   for (i=0;i<100;i++)
   {
-  scanf("%s", rxBuffer);
+  //scanf("%s", rxBuffer);
+  gets (rxBuffer);
   printf("Receiver data processing");  
   printf("data is %s\n", rxBuffer);
   }
