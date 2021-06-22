@@ -7,6 +7,8 @@
 /*------ standard includes -------*/
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <math.h>
 
 /*------ Project includes -------*/
 #include "BMS_Receiver.h"
@@ -26,6 +28,9 @@ void receiveConsoleData_v()
     
   ret = strstr(rxBuffer, "temperature: ");
     printf("rx temp data is %s\n", ret);
+    
+  ret = strtok(rxBuffer, ""temperature": ");
+  printf("rx temp2 data is %s\n", ret);
   }
 }
 
