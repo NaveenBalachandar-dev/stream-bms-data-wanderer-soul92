@@ -97,7 +97,7 @@ void receiveConsoleData_v()
     }
    //ret2 = strtok(rxBuffer, ": ");
   }
-   printf("rx temp data Min : %s ; Min : %s\n", min,max);
+   printf("rx temp data Min : %d ; Min : %d\n", min,max);
 }
 
 // Function to implement substring function in C
