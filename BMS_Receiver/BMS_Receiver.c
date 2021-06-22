@@ -81,13 +81,13 @@ void receiveConsoleData_v()
     max = Temp[0];
     min = Temp[0];
     
-    for(i=1; i<15; i++)
-    {
+   // for(i=1; i<15; i++)
+    //{
         /* If current element is greater than max */
-       if(Temp[i] > max)
-       {
-         max = Temp[i];
-       }
+      // if(Temp[i] > max)
+       //{
+      //   max = Temp[i];
+      // }
 
         /* If current element is smaller than min */
       // if(Temp[i] < min)
