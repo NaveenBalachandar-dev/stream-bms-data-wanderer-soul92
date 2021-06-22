@@ -87,7 +87,7 @@ void receiveConsoleData_v()
      
     
     //for(i=1; i<15; i++)
-    {
+    //{
      //   /* If current element is greater than max */
      // if(Temp[i] > max)
       //  {
